@@ -35,9 +35,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                  sshCommand remote: server, command: """                 
-                      cd /root;touch test.txt;
-                  """
+                  sshPut remote: server, from: 'target/*.war', into: '/root/jar'
                 }
             }
         }
