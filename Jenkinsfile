@@ -9,6 +9,7 @@ def getHost(){
     return remote
 }
 pipeline {
+    agent any
     environment{
            def server = ''
     }
@@ -23,7 +24,6 @@ pipeline {
         }     
         stage('Build') 
         { 
-           agent any
            tools {
              maven 'Maven 3.8.5'
            }   
