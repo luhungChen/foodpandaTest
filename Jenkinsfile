@@ -3,7 +3,7 @@ def getHost(){
     remote.name = 'test'
     remote.host = '192.168.0.99'
     remote.user = 'root'
-    remote.port = 8082
+    remote.port = 8081
     remote.password = 'aline0128'
     remote.allowAnyHosts = true
     return remote
