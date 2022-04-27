@@ -15,7 +15,7 @@ pipeline {
     }
     stages 
     {
-        stage('init-server'){
+        stage('init-ssh-server'){
             steps {
                 script {                 
                    server = getHost()                                   
@@ -32,7 +32,7 @@ pipeline {
              echo 'Building..'
            }
         }
-        stage('Test') {
+        stage('put war') {
             steps {
                 script 
                 {
@@ -42,7 +42,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+               sshCommand remote: server, command: """                 
+                      cd /root/jar;sh test.sh;
+                  """
             }
         }
     }
