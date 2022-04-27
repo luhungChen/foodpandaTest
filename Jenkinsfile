@@ -43,8 +43,7 @@ pipeline {
         stage('Deploy') {
             steps {
                sshCommand remote: server, command: """             
-                      nohup sh /root/jar/test.sh>/dev/null &; 
-                      
+                  nohup sh /root/jar/test.sh>/dev/null &;
                """
             }
         }
