@@ -2,12 +2,13 @@ pipeline {
     agent any
 
     stages {
-        agent any
-        tools {
-          maven 'Maven 3.8.5'
-        }
+        
         stage('Build') 
-        {    
+        { 
+           agent any
+           tools {
+             maven 'Maven 3.8.5'
+           }   
            steps {
              sh "mvn package"
              echo 'Building..'
