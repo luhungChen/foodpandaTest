@@ -42,9 +42,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               sshCommand remote: server, command: """                 
-                      cd /root/jar;sh test.sh;
-                  """
+               sshCommand remote: server, command: """             
+                      sh /root/jar/test.sh;
+                      ps -aux |grep -v grep | grep java;
+               """
             }
         }
     }
