@@ -35,7 +35,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                  sshPut remote: server, from: './', into: '/root/jar'
+                  sshPut remote: server, from: './target/', into: '/root/jar'
                 }
             }
         }
