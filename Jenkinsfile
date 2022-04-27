@@ -9,11 +9,11 @@ def getHost(){
     return remote
 }
 pipeline {
-    stages 
-    {
-        environment{
+    environment{
            def server = ''
-        }     
+    } 
+    stages 
+    {        
         stage('Build') 
         { 
            agent any
