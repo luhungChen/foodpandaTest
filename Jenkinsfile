@@ -11,9 +11,16 @@ def getHost(){
 pipeline {
     environment{
            def server = ''
-    } 
+    }
     stages 
-    {        
+    {
+        stage('init-server'){
+            steps {
+                script {                 
+                   server = getHost()                                   
+                }
+            }
+        }     
         stage('Build') 
         { 
            agent any
