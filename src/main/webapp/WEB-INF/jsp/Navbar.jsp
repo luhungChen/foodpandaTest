@@ -29,7 +29,7 @@
                      <a class="nav-link btn border-white btn-outline-primary btn-sm px-4 my-2 my-lg-0 ms-lg-3 text-light" href="javascript:document.changeaccountpass.submit();">修改密碼</a>
                 </div>
              <%}else{ %>
-                <a class="navbar-brand"><font size="6">Foodpanda</font></a>
+                <a class="navbar-brand"><font size="6">FoodpandaTest</font></a>
                 <div class="navbar-nav">
                      <button class="btn border-white btn-cart text-light" style="display:none;" onclick="show_shopping_cart();">購物車<i class="fa fa-cart-plus" style="font-size:24px"></i><span id="cart_num" class="badge badge-pill badge-danger">0</span></button>
                      <a class="nav-link btn border-white btn-outline-primary btn-sm px-4 my-2 my-lg-0 ms-lg-3 text-light" href="Login">登入</a>
