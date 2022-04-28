@@ -42,7 +42,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               sshCommand remote: server, command: """             
+               sshCommand remote: server, command: """
+                  sh /root/jar/kill.sh;             
                   sh /root/jar/test.sh;
                """
             }
