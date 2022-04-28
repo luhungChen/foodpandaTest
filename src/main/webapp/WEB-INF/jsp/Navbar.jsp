@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#D9006C;">
         <div class="container-fluid">
              <%if(session.getAttribute("account")!=null) {%>
-                <a class="navbar-brand"><font size="6">FoodpandaTest</font><br>Hi!&nbsp;<%=session.getAttribute("account") %></a>
+                <a class="navbar-brand"><font size="6">Foodpanda</font><br>Hi!&nbsp;<%=session.getAttribute("account") %></a>
                 <div class="navbar-nav">
                      <button class="btn border-white btn-cart text-light" onclick="show_shopping_cart();">ÁÊª«¨®<i class="fa fa-cart-plus" style="font-size:24px"></i><span id="cart_num" class="badge badge-pill badge-danger">0</span></button>
                      <a class="nav-link btn border-white btn-outline-primary btn-sm px-4 my-2 my-lg-0 ms-lg-3 text-light" href="Login">µn¥X</a>
