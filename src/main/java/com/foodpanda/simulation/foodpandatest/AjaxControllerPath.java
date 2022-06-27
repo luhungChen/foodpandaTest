@@ -238,7 +238,7 @@ public class AjaxControllerPath
 				mailMessage.setFrom("henrychen0128@gmail.com");
 				mailMessage.setTo(request.getParameter("email"));
 				mailMessage.setSubject("FoodpandaTest 開通通知");
-				mailMessage.setText("Hi!! "+ request.getParameter("newaccount")+"\n請點擊下列連結進行開通帳號手續\nhttp://henrychenweb.ddns.net:8001/Validate?account="+hexString.toString());
+				mailMessage.setText("Hi!! "+ request.getParameter("newaccount")+"\n請點擊下列連結進行開通帳號手續\nhttp://henrychenmyweb.ddns.net:8083/Validate?account="+hexString.toString());
 				jms.send(mailMessage);
 		    	
 		     }
